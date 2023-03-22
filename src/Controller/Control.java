@@ -158,22 +158,17 @@ public class Control implements ActionListener {
                 String extraerdecimal = bin;
                 String subcnueva = extraerdecimal.substring(1, bin.length());
 //                System.out.println("quito el 1= " + subcnueva);
-
+                String ex = String.valueOf(bin4);
                 // ahora voy hallar la mantisa para eso obtengo el primer 1 de la parte entera
-                vi.TxtBina.setText("1." + subcnueva + auxv);
-
+                vi.TxtBina.setText("1." + ex + subcnueva + auxv);
+             //   System.out.println("bin4" + ex);
                 String extraerdecimal2 = vi.TxtBina.getText();
-                String subcnueva2 = extraerdecimal2.substring(2, vi.TxtBina.getText().length());
+                String subcnueva2 = extraerdecimal2.substring(10, vi.TxtBina.getText().length());
 //                System.out.println("quito el 1= "+subcnueva );
 //                System.out.println("mantiza normal="+subcnueva2);
                 vi.txtmantisa.setText(subcnueva2);
                 vi.TxtBitsmantisa.setText(String.valueOf(subcnueva2.length()));
                 vi.TxtNumbit.setText(String.valueOf(vi.TxtBina.getText().length()));
-                // System.out.println("auxv"+auxv);
-                //quede por aqui 3:54 pm 26 de febrero , ahora lo que voy hacer es agrupar la  mantiza y la parte entera 
-                // a binario(etiqueta ) luego voy a comparar hasta donde este el punto antes de eso pasare elpunto al primer 1 en el txfield y luego ya sacare la 
-                //mantisa y el numero de bits de la mantiza y ya luego el signo me tocaria colocar 0 si es positivo y 1 si es negativo y ya
-//               vi.TxtBina.setText(b);
             }
         } else {
             vi.txtbin.setText("");
